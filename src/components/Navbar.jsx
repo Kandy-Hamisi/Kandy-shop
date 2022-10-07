@@ -3,6 +3,7 @@ import Badge from '@mui/material/Badge';
 import styled from 'styled-components'
 import { Search, ShoppingCartOutlined } from '@mui/icons-material'
 import { mobile } from '../responsive';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     height: 60px;
@@ -23,9 +24,6 @@ const Left = styled.div`
     align-items: center;
 `;
 
-const Link = styled.a`
-    /* text-decoration: none; */
-`;
 
 const Language = styled.div`
     font-size: 16px;
@@ -88,16 +86,16 @@ const Navbar = () => {
 
             <Center>
                 <Logo>
-                    <Link href='/'>Kandy Shop.</Link>
+                    <Link to='/'>Kandy Shop.</Link>
                 </Logo>
             </Center>
 
             <Right>
-                <MenuItem><Link href='/register'>REGISTER</Link></MenuItem>
-                <MenuItem><Link href="/login">SIGN IN</Link></MenuItem>
+                <MenuItem><Link to='/register'>REGISTER</Link></MenuItem>
+                <MenuItem><Link to="/login">SIGN IN</Link></MenuItem>
                 <MenuItem>
                     <Badge badgeContent={4} color="primary">
-                        <Link href="/cart"><ShoppingCartOutlined/></Link>
+                        <Link to="/cart"><ShoppingCartOutlined/></Link>
                     </Badge>
                 </MenuItem>
             </Right>

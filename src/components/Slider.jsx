@@ -3,6 +3,7 @@ import  { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material'
 import styled from 'styled-components'
 import { sliderConstants } from '../constants';
 import { mobile } from '../responsive';
+import { Link } from 'react-router-dom';
 
 
 const Container = styled.div`
@@ -81,7 +82,6 @@ const Arrow = styled.div`
     z-index: 2;
 `;
 
-const Link = styled.a``;
 
 const Slider = () => {
 
@@ -112,7 +112,7 @@ const Slider = () => {
                     <InfoContainer>
                         <Title>{slider.title}</Title>
                         <Desc>{slider.desc}</Desc>
-                        <Link href='/products'><Button>Show Now</Button></Link>
+                        <Link to='/products'><Button>Show Now</Button></Link>
                     </InfoContainer>
                 </Slide>)
             }
