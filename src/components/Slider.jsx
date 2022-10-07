@@ -2,6 +2,7 @@ import { useState } from 'react'
 import  { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material'
 import styled from 'styled-components'
 import { sliderConstants } from '../constants';
+import { mobile } from '../responsive';
 
 
 const Container = styled.div`
@@ -10,6 +11,7 @@ const Container = styled.div`
     display: flex;
     position: relative;
     overflow: hidden;
+    ${mobile({display: "none"})}
 `;
 
 const Wrapper = styled.div`
@@ -79,6 +81,8 @@ const Arrow = styled.div`
     z-index: 2;
 `;
 
+const Link = styled.a``;
+
 const Slider = () => {
 
     const [ slideIndex, setSlideIndex ] = useState(0);
@@ -108,7 +112,7 @@ const Slider = () => {
                     <InfoContainer>
                         <Title>{slider.title}</Title>
                         <Desc>{slider.desc}</Desc>
-                        <Button>Show Now</Button>
+                        <Link href='/products'><Button>Show Now</Button></Link>
                     </InfoContainer>
                 </Slide>)
             }
