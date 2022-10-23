@@ -30,16 +30,19 @@ export const categories = [
       id: 1,
       img: "https://res.cloudinary.com/dztycn4or/image/upload/v1665042011/pexels-photo-5886041_sxqbxv.jpg",
       title: "SHIRT STYLE!",
+      cat: "women"
     },
     {
       id: 2,
       img: "https://res.cloudinary.com/dztycn4or/image/upload/v1665041846/fashion-2766725_960_720_vpxsoj.jpg",
       title: "LOUNGEWEAR LOVE",
+      cat: "coats"
     },
     {
       id: 3,
       img: "https://res.cloudinary.com/dztycn4or/image/upload/v1665042064/kandyShop/pexels-photo-5480696_mvh96y.jpg",
       title: "LIGHT JACKETS",
+      cat: "jeans"
     },
   ];
 
