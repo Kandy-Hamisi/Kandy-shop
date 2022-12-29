@@ -32,4 +32,8 @@ app.use('/api/checkout', stripeRoute);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("Backend server is running")
-})
+});
+
+
+// exporting the express api
+module.exports = app;
