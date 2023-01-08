@@ -7,10 +7,11 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 
 import ProductList from "./pages/ProductList"
+import { useSelector } from "react-redux"
 
 function App() {
 
-  const user = true;
+  const user = useSelector(state => state.user.currentuser);
 
   return (
     <Routes>

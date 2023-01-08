@@ -24,7 +24,7 @@ const Products = ({ category, filter, sort }) => {
             : "http://localhost:3000/api/products");
             setProducts(response.data);
       } catch(err) {
-        
+        console.log(err);
       }
     };
     getProducts();
@@ -41,12 +41,16 @@ const Products = ({ category, filter, sort }) => {
       );
   }, [ products, filter, category ]);
 
+  // console.log(filteredProducts);
 
   return (
+    
     <Container>
-        { filteredProducts.map(item => (
+        { category ? filteredProducts.map((item) => (
             <Product key={item.id} item={item}/>
-        ))}
+        )) : products.map(item => (
+          <Product key={item.id} item={item}/>
+      ))}
     </Container>
   )
 }
